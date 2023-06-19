@@ -1,0 +1,46 @@
+<div class="min-h-full">
+  <nav class="bg-gray-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <img class="h-11 w-11" style="background-color: (0,0,0,0);" src="https://marketplace.canva.com/EAFeqsKR5oY/1/0/400w/canva-simple-black-and-white-events-logo-q1a7KEMatn4.jpg?width=200" alt="Your Company">
+          </div>
+          <div class="ml-10 flex items-baseline space-x-4">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="/" class="rounded-md bg-transparent  text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent " aria-current="page">메인페이지</a>
+            {% if user %}
+              <a href="/user/myPage" class="rounded-md bg-transparent  text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-1 hover:border-transparent ">{{user.name}}</a>
+              <a href="/user/list" class="rounded-md bg-transparent  text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-1 hover:border-transparent ">사용자리스트</a>
+            {% endif %}
+            <li style="list-style: none;" class="nav-item">
+              <a class="nav-link rounded-md bg-transparent  text-white font-semibold hover:text-white py-2.5 px-4 border border-white hover:border-1 hover:border-transparent" target='_blank' href="https://github.com/dlrkdqls123"><i class="fa-brands fa-github fa-lg" style="color:white"></i></a>
+            </li>
+            <li style="list-style: none;" class="nav-item">
+              <a class="nav-link rounded-md bg-transparent  text-white font-semibold hover:text-white py-2.5 px-4 border border-white hover:border-1 hover:border-transparent" target='_blank' href="https://instagram.com/libera_510/"><i class="fa-brands fa-instagram" style="color:white"></i></a>
+            </li>
+            <li style="list-style: none;" class="nav-item">
+              <a class="nav-link rounded-md bg-transparent  text-white font-semibold hover:text-white py-2.5 px-4 border border-white hover:border-1 hover:border-transparent" target='_blank' href="https://youtube.com/channel/UCreQN8y9cs7GaZUkGlu8jFQ"><i class="fa-brands fa-youtube" style="color:white"></i></a>
+            </li>
+            <li style="list-style: none;" class="nav-item">
+              <a class="nav-link rounded-md bg-transparent  text-white font-semibold hover:text-white py-2.5 px-4 border border-white hover:border-1 hover:border-transparent" target='_blank' href="https://twitter.com/hotsexxyboy123"><i class="fa-brands fa-twitter" style="color:white"></i></a>
+            </li>
+            <li style="list-style: none;" class="nav-item">
+              <a class="nav-link rounded-md bg-transparent  text-white font-semibold hover:text-white py-2.5 px-4 border border-white hover:border-1 hover:border-transparent" target='_blank' href="https://facebook.com/profile.php?id=100030818839346"><i class="fa-brands fa-facebook" style="color:white"></i></a>
+            </li>
+          </div>
+        </div>
+        <div class="ml-4 flex items-center md:ml-6">
+          {% if user %}
+            <button onclick="location.href='/auth/signOut'" class="bg-transparent text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded-full">
+              로그아웃
+            </button>
+          {% else %} 
+            <button onclick="location.href='/auth/signIn'" class="bg-transparent text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded-full">
+              로그인
+            </button>
+          {% endif %} 
+        </div>
+    </div>
+  </nav>
+</div>
